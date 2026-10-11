@@ -1159,7 +1159,7 @@ $('#lwall').innerHTML=[...brands,...brands].map(([k,n,t,c])=>`<div class="ltile"
 const LOGOS={allevents:'allevents.svg',lincolncity:'lincolncity.svg',postoffice:'postoffice.svg',autotrader:'autotrader.webp',cakebox:'cakebox.webp'};
 $$('[data-logo]').forEach(el=>{const k=el.dataset.logo,n=el.dataset.name,f=LOGOS[k];
   if(!f){if(el.dataset.fb==='none')el.remove();else el.innerHTML=`<span class="wm">${n}</span>`;return}
-  const img=new Image();img.alt=(n||k)+' logo';img.decoding='async';img.src='images/logos/'+f;el.innerHTML='';el.append(img);el.classList.add('has-img','lg-'+k)});
+  const img=new Image();img.alt=(n||k)+' logo';img.decoding='async';img.src='images/logo/'+f;el.innerHTML='';el.append(img);el.classList.add('has-img','lg-'+k)});
 
 /* ===== v3: hero mesh follows the mouse ===== */
 if(fine&&!reduce){const hm=$('#heroMesh');addEventListener('pointermove',e=>{const x=e.clientX/innerWidth-.5,y=e.clientY/innerHeight-.5;hm.style.transform=`translate(${x*60}px,${y*60}px)`})}
